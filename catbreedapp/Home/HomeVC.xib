@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="catbreedapp" customModuleProvider="target">
+            <connections>
+                <outlet property="searchBar" destination="eRC-DW-w1b" id="vlr-mC-SNn"/>
+                <outlet property="tableView" destination="RBM-uZ-JqB" id="PcA-Ad-u1Z"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dMb-TV-VKB">
+                    <rect key="frame" x="0.0" y="36" width="414" height="860"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvi-sL-lJJ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat Breeds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEh-RA-2Zn">
+                                    <rect key="frame" x="24" y="0.0" width="124" height="46"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXc-pS-ADs">
+                                    <rect key="frame" x="342" y="2" width="48" height="46"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="46" id="0jB-VP-K3B"/>
+                                        <constraint firstAttribute="width" constant="48" id="IZ2-sg-k8f"/>
+                                    </constraints>
+                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="favoritesBttnClicked:" destination="-1" eventType="touchUpInside" id="lKU-yL-gSu"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="IEh-RA-2Zn" firstAttribute="top" secondItem="mvi-sL-lJJ" secondAttribute="top" id="7lS-ef-Ndk"/>
+                                <constraint firstAttribute="bottom" secondItem="xXc-pS-ADs" secondAttribute="bottom" constant="2" id="Zcb-Ou-RYJ"/>
+                                <constraint firstAttribute="bottom" secondItem="IEh-RA-2Zn" secondAttribute="bottom" constant="4" id="i2x-r1-pat"/>
+                                <constraint firstAttribute="trailing" secondItem="xXc-pS-ADs" secondAttribute="trailing" constant="24" id="oEJ-vY-s5Y"/>
+                                <constraint firstItem="IEh-RA-2Zn" firstAttribute="leading" secondItem="mvi-sL-lJJ" secondAttribute="leading" constant="24" id="ucZ-io-7Wh"/>
+                                <constraint firstItem="xXc-pS-ADs" firstAttribute="top" secondItem="mvi-sL-lJJ" secondAttribute="top" constant="2" id="zhh-v4-AZi"/>
+                            </constraints>
+                        </view>
+                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="eRC-DW-w1b">
+                            <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Xmp-BI-kTd"/>
+                            </constraints>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RBM-uZ-JqB">
+                            <rect key="frame" x="0.0" y="100" width="414" height="760"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="dMb-TV-VKB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="36" id="8Ve-8t-VfP"/>
+                <constraint firstItem="dMb-TV-VKB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="OcL-UR-MPI"/>
+                <constraint firstAttribute="bottom" secondItem="dMb-TV-VKB" secondAttribute="bottom" id="chs-9t-PI7"/>
+                <constraint firstItem="dMb-TV-VKB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oga-pM-ZnJ"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="114"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
