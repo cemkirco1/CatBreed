@@ -7,7 +7,7 @@ Hello there. I'm Cem and I've created a Cat Breed app.
 
 Splash
 -----------------------------------
-<img src="screen/home.jpeg" width="200" height="400">
+<img src="screen/splash.jpeg" width="200" height="400">
 
 
 
